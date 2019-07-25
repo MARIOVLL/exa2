@@ -21,21 +21,39 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 		<!-- Custom MQTT client for this example ----------------------------------------------->
+		<button id='LED1' type="button" onclick="LED1();">
+		led1_ON!</button>
+		<button type="button" onclick="location.assign('/led1_OFF');">
+		led1_OFF!</button>
+<!-- <button type="button" onclick="location.assign('/led1_OFF');">
+led1_OFF!</button> -->
+		<button type="button" onclick="location.assign('/led2_ON');">
+		led2_ON!</button>
+		<button type="button" onclick="location.assign('/led2_OFF');">
+		led2_OFF!</button>
+		<button type="button" onclick="location.assign('/led3_ON');">
+		led3_ON!</button>
+		<button type="button" onclick="location.assign('/led3_OFF');">
+		led3_OFF!</button>
+		<button type="button" onclick="location.assign('/led4_ON');">
+		led4_ON!</button>
+		<button type="button" onclick="location.assign('/led4_OFF');">
+		led4_OFF!</button>
 		
-		<script>
+<script>
 
   // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
-  client = new Paho.MQTT.Client("postman.cloudmqtt.com", 30154, "web_" + parseInt(Math.random() * 100, 10));
+  client = new Paho.MQTT.Client("postman.cloudmqtt.com",30131, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
   var options = {
     useSSL: true,
-    userName: "qcxiuxji",
-    password: "KIpBPRu_fELk",
+    userName: "rrnjfium",
+    password: "pJyzsJk0kphU",
     onSuccess:onConnect,
     onFailure:doFail
   }
@@ -115,5 +133,8 @@
 	 }
   
 </script>
+
+
+
 	</body>
 </html>
