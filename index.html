@@ -21,6 +21,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 		<!-- Custom MQTT client for this example ----------------------------------------------->
+		
 		<button id='LED1' type="button" onclick="LED1();">
 		led1_ON!</button>
 		<button type="button" onclick="location.assign('/led1_OFF');">
@@ -40,12 +41,12 @@ led1_OFF!</button> -->
 		<button type="button" onclick="location.assign('/led4_OFF');">
 		led4_OFF!</button>
 		
-<script>
+		<script>
 
   // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
-  client = new Paho.MQTT.Client("postman.cloudmqtt.com",30131, "web_" + parseInt(Math.random() * 100, 10));
+  client = new Paho.MQTT.Client("postman.cloudmqtt.com", 30131, "web_" + parseInt(Math.random() * 100, 10));
 
   // set callback handlers
   client.onConnectionLost = onConnectionLost;
