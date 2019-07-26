@@ -104,8 +104,11 @@ led1_OFF!</button> -->
   function led() {
     boarId=document.getElementById("boarId").value;
 	userIdId=document.getElementById("userId").value;
-	
+	if(led=0){
     sendMessage(userId+boarId+':led_state:0')
+	else{
+	sendMessage(userId+boarId+':led_state:1')
+	}
   }
   // called when a message arrives
   myName='leo'
