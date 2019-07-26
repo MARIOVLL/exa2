@@ -28,13 +28,13 @@
 		
 		<button id='led 1' type="button" onclick="LED1();">
 		led1_ON!</button>
-		<button type="button" onclick="location.assign('/led1_OFF');">
+		<button type="button" onclick="led1(1)('/led1_OFF');">
 		led1_OFF!</button>
 <!-- <button type="button" onclick="location.assign('/led1_OFF');">
 led1_OFF!</button> -->
-		<button type="button" onclick="location.assign('/led2_ON');">
+		<button type="button" onclick="led(1)('/led2_ON');">
 		led2_ON!</button>
-		<button type="button" onclick="location.assign('/led2_OFF');">
+		<button type="button" onclick="led1(0)('/led2_OFF');">
 		led2_OFF!</button>
 		<button type="button" onclick="location.assign('/led3_ON');">
 		led3_ON!</button>
@@ -108,8 +108,12 @@ led1_OFF!</button> -->
   function led() {
     boarId=document.getElementById("boarId").value;
 	userIdId=document.getElementById("userId").value;
-    sendMessage(userId+boarId+':led_state:0')
-	sendMessage(userId+boarId+':led_state:1')
+    sendMessage(userId+boarId+':led_state:1')
+	}
+ function led1(){
+	boarId=document.getElementById("boarId").value;
+	userIdId=document.getElementById("userId").value;
+	sendMessage(userId+boarId+':led_state:0')
 	
   }
   // called when a message arrives
@@ -139,10 +143,5 @@ led1_OFF!</button> -->
 	 }
   
 </script>
-<?php
-if ($_POST['on'] { 
-exec("sudo python /homne/pi/Desktop/prende.py")
-}else{
-exec("sudo python /homne/pi/Desktop/apaga.py")
-}
+
 </head></html>
